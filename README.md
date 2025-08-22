@@ -24,15 +24,24 @@ npm test     # Run tests
 - Axios
 - Inversify (DI)
 
-## Structure
+## Architecture
+
+Component-based architecture for single page application using Clean Architecture principles (Presentation -> Application -> Infrastructure -> Domain) with S.O.L.I.D. principles and dependency inversion.
+
+### Structure
 
 ```
 src/
-├── Pages/          # Application pages that contents component architecture of that page and clean architecture that need for dynamic rendering (domain, infrastructure, use case and application) using the S.O.L.I.D. principles
+├── Pages/          # Application pages with clean architecture layers
+│   ├── Domain/     # Anemic models and DTOs
+│   ├── Infrastructure/ # Repositories
+│   ├── UseCase/    # Application rules
+│   └── Service/    # Presentation layer
 ├── Router/         # Routing configuration
-└── Shared/         # Shared components and services
-    ├── Components/
-    ├── Repository/
-    ├── UseCase/
-    └── Utils/
+├── Shared/         # Reusable resources
+└── Context/        # Application state management
 ```
+
+## Documentation
+
+- [Architecture Details](documentation.md)
