@@ -1,0 +1,11 @@
+Diagrama de dominio
+
+aqui referencia markdown a la imagen de nombre TechnicalTest.png
+
+Diagrama de casos de usos
+
+aquí referencia markdown a la imagen de nombre TechnicalTestUseCases.png
+
+Repositorio: 
+
+https://github.com/skrapidev/Xcaret-TechTest-BolerPlate
