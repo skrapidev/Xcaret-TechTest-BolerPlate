@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
+import { OrderProvider } from "../../../Context/OrderContext";
 
 interface BaseProps {
   children: React.ReactNode;
 }
 export const BaseComponent = ({ children }: BaseProps) => {
   return (
-    <>
+    <OrderProvider>
       <div>
         <nav style={{ display: "flex", padding: 0, margin: 0, gap: 15 }}>
           <NavLink to="/" end>
@@ -17,6 +18,6 @@ export const BaseComponent = ({ children }: BaseProps) => {
         </nav>
       </div>
       <div>{children}</div>
-    </>
+    </OrderProvider>
   );
 };

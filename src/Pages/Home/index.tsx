@@ -1,16 +1,23 @@
-import Card from "./Components/Card"
-
-
-
+import { useContext, useEffect } from "react";
+import { OrderContext } from "../../Context/OrderContext";
+import Card from "./Components/Card";
 
 const Home = () => {
-    return (
-        <div>
-            <h1>Home</h1>
-            <p>Esta es la pagina de inicio</p>
-            <Card/>
-        </div>
-    )
-}
+  const { order, getOrder } = useContext(OrderContext);
 
-export default Home
+  useEffect(() => {
+    getOrder();
+  }, []); // didmount
+  return (
+    <div>
+      <h1>Home</h1>
+      <p>Esta es la pagina de inicio</p>
+      <Card />
+      <p>
+        OrdenId: {order.id} -------- Orden: {order.name}
+      </p>
+    </div>
+  );
+};
+
+export default Home;

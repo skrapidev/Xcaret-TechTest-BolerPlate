@@ -1,10 +1,8 @@
-
-
 const AboutUs = () => {
-return (
+  return (
     <div>
-        <h1>Esto es la página de About Us</h1>
+      <h1>Esto es la página de About Us</h1>
     </div>
-)
-}
-export default AboutUs
+  );
+};
+export default AboutUs;

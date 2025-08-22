@@ -17,3 +17,5 @@ Para el renderizado dinámico de cada página del aplicativo utilizando servicio
 Al ser un código debilmente acoplado se utiliza inversión de dependencia y el resto de los 4 principios S.O.L.I.D. cumpliendo con las reglas de construcción de la arquitectura mencionada, dejando en nuestro contenedor las dependencias necesarias para el renderizado de cada página en react.
 
 En la carpeta Shared se encuentran todos los recursos que el aplicativo puede reutilizar durante la ejecución de cada regla de negocio y renderizado.
+
+En la carpeta Context (Estado de aplicación) se utiliza todo recurso que puede ser compartido en mas de una página, por ejemplo: un contexto de datos que almacene los datos de la orden durante todo el flujo del e-commerce, esta funcionalidad es muy parecida al patrón de estado de aplicación que maneja redux.
