@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 interface BaseProps {
   children: React.ReactNode;
 }
-const BaseComponent = ({ children }: BaseProps) => {
+export const BaseComponent = ({ children }: BaseProps) => {
   return (
     <>
       <div>
@@ -20,4 +20,3 @@ const BaseComponent = ({ children }: BaseProps) => {
     </>
   );
 };
-export default BaseComponent;
