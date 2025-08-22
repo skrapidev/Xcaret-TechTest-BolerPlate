@@ -1,9 +1,9 @@
 import { injectable, inject } from "inversify";
 import { IRepositoryBase } from "../../../Shared/Repositry/IRepositoryBase";
-import HomeRequest from "../Domain/Dto/HomeRequest";
-import HomeEntity from "../Domain/Entities/HomeEntity";
+import {HomeRequest} from "../Domain/Dto";
+import {HomeEntity} from "../Domain/Entities";
 import { IHomeRepository } from "./IHomeRepository";
-import { IHttpAdapter } from "../../../Shared/AppServiceContainer/Axios/IHttpAdapter";
+import { IHttpAdapter } from "../../../Shared/AppServiceContainer";
 import { types as TYPES } from "../ModuleContainer";
 
 @injectable()

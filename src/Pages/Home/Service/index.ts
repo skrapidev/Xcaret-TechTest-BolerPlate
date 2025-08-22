@@ -1,4 +1,5 @@
-import HomeRequest from "../Domain/Dto/HomeRequest";
+import {HomeRequest, ProductAvailabilityRequest} from "../Domain/Dto";
+import AvailabilityProductsRepository from "../Infrastructure/AvailabilityProductsRepository";
 import HomeRepository from "../Infrastructure/HomeRepository";
 import {ModuleHomeContainer, types as TYPES} from"../ModuleContainer" 
 
@@ -20,4 +21,9 @@ export async function updateHomeData(id: number, name: string) {
 export async function deleteHomeData(id: number) {
     const homeRepository = ModuleHomeContainer.get<HomeRepository>(TYPES.HomeRepository);
     return await homeRepository.delete({id} as HomeRequest)
+}
+export async function getProductAvailability(productCode: string, visitDate: Date, adults: number, children: number, infants: number) {
+    const availabilityRepository = ModuleHomeContainer.get<AvailabilityProductsRepository>(TYPES.AvailabilityProductsRepository);
+    const request: ProductAvailabilityRequest = {productCode, visitDate, adults, children, infants}
+    return await availabilityRepository.getAvailability(request)
 }
